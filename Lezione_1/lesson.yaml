@@ -1,0 +1,87 @@
+- Class: meta
+  Course: Introduzione alla programmazione con R
+  Lesson: Lezione 1
+  Author: Valentina Porcu
+  Type: Standard
+  Organization: DataWiring
+  Version: 2.4.3
+
+- Class: text
+  Output: Benvenuti a questo corso di Introduzione alla programmazione con R, Lezione 1. In questo corso impariamo le basi di R tramite le lezioni e tramite alcuni esercizi semplici
+  
+- Class: text
+  Output: Premi enter per andare avanti con le domande. Se stai trovando difficoltà con una domanda, puoi sempre inserire il comando skip() per ottenere la soluzione e saltare alla prossima
+
+- Class: text
+  Output: In questa prima sezione cominciamo a fare delle prime operazioni e familiarizzare con gli oggetti di base 
+  
+- Class: text
+  Output: Cominciamo con le operazioni di base
+  
+- Class: text
+  Output: Pronti? Via!
+  
+- Class: text
+  Output: La cosa più semplice che possiamo fare con R sono delle piccole operazioni matematiche
+
+- Class: cmd_question
+  Output: Inserisci 5 + 3
+  CorrectAnswer: 5 + 3
+  AnswerTests: omnitest(correctExpr='5 + 3')
+  Hint: Digita 5 + 3
+ 
+- Class: cmd_question
+  Output: Facciamone un'altra! Inserisci 9 * 7
+  CorrectAnswer: 9 * 7
+  AnswerTests: omnitest(correctExpr='9 * 7')
+  Hint: Digita 9 * 7 
+  
+- Class: cmd_question
+  Output: L'ultima, ora! Inserisci 12 - 2
+  CorrectAnswer: 12 - 2
+  AnswerTests: omnitest(correctExpr='12 - 2')
+  Hint: Digita 12 - 2 
+
+- Class: text
+  Output: Perfetto, ci siamo
+  
+- Class: text
+  Output: Adesso creiamo il nostro primo oggetto
+
+- Class: cmd_question
+  Output: Crea un oggetto x che contenga il numero 28
+  CorrectAnswer: x <- 28
+  AnswerTests: omnitest(correctExpr='x <- 28')
+  Hint: Digita x <- 28 
+
+- Class: text
+  Output: Benissimo! Andiamo avanti
+
+  
+- Class: cmd_question
+  Output: Crea un oggetto y che contenga la moltiplicazione tra 2 e 3
+  CorrectAnswer: y <- 2 * 3
+  AnswerTests: omnitest(correctExpr='y <- 2 * 3')
+  Hint: Digita y <- 2 * 3 
+  
+- Class: cmd_question
+  Output: Andiamo a "stampare"" il nostro oggetto y con la funzione print()
+  CorrectAnswer: print(y)
+  AnswerTests: omnitest(correctExpr='print(y)')
+  Hint: Digita print(y)
+
+
+- Class: text
+  Output: Adesso tramite la funzione "combine", c(), creiamo un oggetto z che contenga una lista di numeri
+ 
+- Class: cmd_question
+  Output: Creiamo un oggetto z che contenga i numeri 5, 9, 12, 23, 45, 67
+  CorrectAnswer: z <- c(5, 9, 12, 23, 45, 67)
+  AnswerTests: omnitest(correctExpr='z <- c(5, 9, 12, 23, 45, 67)')
+  Hint: Digita z <- c(5, 9, 12, 23, 45, 67)
+  
+- Class: text
+  Output: Ottimo lavoro!
+
+- Class: text
+  Output: Ci vediamo nella prossima lezione!

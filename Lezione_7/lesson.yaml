@@ -1,0 +1,42 @@
+- Class: meta
+  Course: Introduzione alla programmazione con R
+  Lesson: Lezione 7
+  Author: Valentina Porcu
+  Type: Standard
+  Organization: DataWiring
+  Version: 2.4.3
+
+- Class: text
+  Output: In questa lezione vediamo qualche semplice concetto per il caricamento file
+  
+
+- Class: mult_question
+  Output: Quale tra queste funzioni ci permette di caricare un file in formato .csv senza importare altri pacchetti?
+  AnswerChoices: read.csv(); str() ; read.xlsx()
+  CorrectAnswer: read.csv()
+  AnswerTests: omnitest(correctVal='read.csv()')
+  Hint: read.csv()
+  
+- Class: mult_question
+  Output: Quale funzione ci permette di inserire dei dati a mano?
+  AnswerChoices: scan(); read_delim() ; gdata
+  CorrectAnswer: scan()
+  AnswerTests: omnitest(correctVal='scan()')
+  Hint: scan()
+
+- Class: mult_question
+  Output: Quale pacchetto ci permette di importare dati da SPSS?
+  AnswerChoices: haven; read_delim() ; tuneR
+  CorrectAnswer: haven
+  AnswerTests: omnitest(correctVal='haven')
+  Hint: haven
+
+- Class: mult_question
+  Output: Quale funzione ci permette di salvare un file .csv sul nostro computer?
+  AnswerChoices: write.csv(); write_foreign() ; ggplot
+  CorrectAnswer: write.csv()
+  AnswerTests: omnitest(correctVal='write.csv()')
+  Hint: write.csv()
+
+- Class: text
+  Output: Benissimo! Ci vediamo nella prossima lezione
