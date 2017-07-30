@@ -1,0 +1,129 @@
+- Class: meta
+  Course: Les bases de la programmation en R
+  Lesson: Section 9
+  Author: Valentina Porcu
+  Type: Standard
+  Organization: DataWiring
+  Version: 2.4.3
+
+- Class: text
+  Output: Créons des graphiques avec des fonctions de base et ggplot
+  
+- Class: exact_question
+  Output: Il faut charger ggplot avec la fonction library()
+  CorrectAnswer: library(ggplot2)
+  AnswerTests: omnitest(correctVal = library(ggplot2))
+  Hint: library(ggplot2)
+
+- Class: cmd_question
+  Output: Créer un graphique avec la fonction plot() en plaçant Petal.Length sur l'axe x et Petal.Width sur l'axe y. Utilisez le symbole $ pour sélectionner les variables
+  CorrectAnswer: plot(x= iris$Petal.Length, y=iris$Petal.Width)
+  AnswerTests: omnitest(correctExpr='plot(x= iris$Petal.Length, y=iris$Petal.Width)')
+  Hint: Essaye avec plot(x= iris$Petal.Length, y=iris$Petal.Width)
+  
+- Class: cmd_question
+  Output: Recréer le graphique en ajoutant le titre "Pétales”
+  CorrectAnswer: plot(x= iris$Petal.Length, y=iris$Petal.Width, main = "Pétales")
+  AnswerTests: omnitest(correctExpr='plot(x= iris$Petal.Length, y=iris$Petal.Width, main = "Pétales")')
+  Hint: Essaye avec plot(x= iris$Petal.Length, y=iris$Petal.Width, main = "Pétales")
+  
+- Class: cmd_question
+  Output: Changer la couleur des indicateurs avec "red"
+  CorrectAnswer: plot(x= iris$Petal.Length, y=iris$Petal.Width, main = "Petali", col = "red")
+  AnswerTests: omnitest(correctExpr='plot(x= iris$Petal.Length, y=iris$Petal.Width, main = "Petali", col = "red")')
+  Hint: Essaye avec plot(x= iris$Petal.Length, y=iris$Petal.Width, main = "Petali", col = "red")
+  
+- Class: cmd_question
+  Output: Ajoutez le paramètre pch = 12
+  CorrectAnswer: plot(x= iris$Petal.Length, y=iris$Petal.Width, main = "Petali", col = "red", pch = 12)
+  AnswerTests: omnitest(correctExpr='plot(x= iris$Petal.Length, y=iris$Petal.Width, main = "Petali", col = "red", pch = 12)')
+  Hint: Essaye avec plot(x= iris$Petal.Length, y=iris$Petal.Width, main = "Petali", col = "red", pch = 12)
+  
+- Class: cmd_question
+  Output: Créer un histogramme avec la variable de iris Sepal.Width
+  CorrectAnswer: hist(iris$Sepal.Width)
+  AnswerTests: omnitest(correctExpr='hist(iris$Sepal.Width)')
+  Hint: Essaye avec hist(iris$Sepal.Width)
+  
+
+- Class: cmd_question
+  Output: Créer une table avec la variable Species de Iris, en l’appelant tabir
+  CorrectAnswer: tabir <- table(iris$Species)
+  AnswerTests: omnitest(correctExpr='tabir <- table(iris$Species)')
+  Hint: Essaye avec tabir <- table(iris$Species)
+  
+
+- Class: cmd_question
+  Output: Créer un barplot avec la table créée. Réglez la couleur comme "blue"
+  CorrectAnswer: barplot(tabir, col = "blue")
+  AnswerTests: omnitest(correctExpr='barplot(tabir, col = "blue")')
+  Hint: Essaye avec barplot(tabir, col = "blue")
+  
+- Class: cmd_question
+  Output: Créer un vecteur perc qui contient les valeurs suivantes: 20, 30, 5, 10, 12, 20, 3)
+  CorrectAnswer: perc <- c(20, 30, 5, 10, 12, 20, 3)
+  AnswerTests: omnitest(correctExpr='perc <- c(20, 30, 5, 10, 12, 20, 3)')
+  Hint: Essaye avec perc <- c(20, 30, 5, 10, 12, 20, 3)
+
+- Class: cmd_question
+  Output: Créer un diagramme circulaire perc en utilisant la palette heat.colors() et en spécifiant le nombre d'objets 
+  CorrectAnswer: pie(perc, col = heat.colors(7))
+  AnswerTests: omnitest(correctExpr='pie(perc, col = heat.colors(7))')
+  Hint: Essaye avec pie(perc, col = heat.colors(7))
+
+- Class: text
+  Output: Nous utilisons maintenant l’ensemble de données mtcars pour créer des graphiques avec ggplot
+  
+
+- Class: cmd_question
+  Output: Utilisons la fonction ggplot() et geom_point() en mettant la variable mpg sur l'axe des x et cyl sur l'axe y 
+  CorrectAnswer: ggplot(mtcars, aes(x = mpg, y = disp)) + geom_point()
+  AnswerTests: omnitest(correctExpr='ggplot(mtcars, aes(x = mpg, y = disp)) + geom_point()')
+  Hint: Essaye avec ggplot(mtcars, aes(x = mpg, y = disp)) + geom_point()
+
+- Class: cmd_question
+  Output: Au lieu de geom_point() insérer une ligne de tendance avec  type de ligne = 4
+  CorrectAnswer: ggplot(mtcars, aes(x = mpg, y = disp)) + geom_smooth(linetype = 4)
+  AnswerTests: omnitest(correctExpr='ggplot(mtcars, aes(x = mpg, y = disp)) + geom_smooth(linetype = 4)')
+  Hint: Essaye avec ggplot(mtcars, aes(x = mpg, y = disp)) + geom_smooth(linetype = 4)
+
+- Class: cmd_question
+  Output: En utilisant à nouveau geom_point() sur les mêmes variables entrez les couleurs en fonction de la variable cyl
+  CorrectAnswer: ggplot(mtcars, aes(x = mpg, y = disp, col = cyl)) + geom_point()
+  AnswerTests: omnitest(correctExpr='ggplot(mtcars, aes(x = mpg, y = disp, col = cyl)) + geom_point()')
+  Hint: Essaye avec ggplot(mtcars, aes(x = mpg, y = disp, col = cyl)) + geom_point()
+
+
+- Class: cmd_question
+  Output: Enregistrer le graphique ci-dessus dans l’objet g1
+  CorrectAnswer: g1 <- ggplot(mtcars, aes(x = mpg, y = disp, col = cyl)) + geom_point()
+  AnswerTests: omnitest(correctExpr='g1 <- ggplot(mtcars, aes(x = mpg, y = disp, col = cyl)) + geom_point()')
+  Hint: Essaye avec g1 <- ggplot(mtcars, aes(x = mpg, y = disp, col = cyl)) + geom_point()
+ 
+- Class: cmd_question
+  Output: Au graphique g1 ajouter le paramètre facet_grid(cy~ l.)
+  CorrectAnswer: g1 + facet_grid(cyl~.)
+  AnswerTests: omnitest(correctExpr='g1 + facet_grid(cyl~.)')
+  Hint: Essaye avec g1 + facet_grid(cyl~.)
+  
+
+- Class: cmd_question
+  Output: Ajouter au graphique g1 le paramètre geom_point() en insérant le paramètre shape égal à 18, le paramètre size égale à 6 et le paramètre alpha égal à 0,5. La couleur doit être "red"
+  CorrectAnswer: g1 + geom_point(shape = 18, size = 6, alpha = 0.5, col = "red")
+  AnswerTests: omnitest(correctExpr='g1 + geom_point(shape = 18, size = 6, alpha = 0.5, col = "red")')
+  Hint: Essaye avec g1 + geom_point(shape = 18, size = 6, alpha = 0.5, col = "red")
+
+- Class: text
+  Output: Nous sommes arrivés à la fin du chapitre des exercices! Pour toutes questions et informations, envoyez un message sur Datawiring.me!
+
+
+
+
+
+
+
+
+
+
+
+

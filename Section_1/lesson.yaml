@@ -1,0 +1,85 @@
+- Class: meta
+  Course: Les bases de la programmation en R
+  Lesson: Section 1
+  Author: Valentina Porcu
+  Type: Standard
+  Organization: DataWiring
+  Version: 2.4.3
+
+- Class: text
+  Output: Bienvenue à ce cours ‘Les base de la programmation en R’, Section 1. Dans ce cours, nous apprenons les bases de R à travers les leçons et à travers quelques exercices simples
+  
+- Class: text
+  Output: Appuyez sur Entrée pour procéder avec les questions. Si vous trouvez des difficultés avec une question, vous pouvez toujours entrer la commande skip() pour obtenir la solution et passer à la prochaine
+
+- Class: text
+  Output: Dans cette première section, nous commençons à faire les premiers pas et à familiariser avec les objets de base 
+  
+- Class: text
+  Output: Commençons par les opérations de base
+  
+  
+- Class: text
+  Output: La chose la plus simple que nous pouvons faire avec R sont de petites opérations mathématiques
+
+- Class: cmd_question
+  Output: Entrer 5 + 3
+  CorrectAnswer: 5 + 3
+  AnswerTests: omnitest(correctExpr='5 + 3')
+  Hint: Essaie  5 + 3
+ 
+- Class: cmd_question
+  Output: Faisons un autre! Entrer 9 * 7
+  CorrectAnswer: 9 * 7
+  AnswerTests: omnitest(correctExpr='9 * 7')
+  Hint: Essaie  9 * 7 
+  
+- Class: cmd_question
+  Output: La dernière, maintenant! Entrer 12 - 2
+  CorrectAnswer: 12 - 2
+  AnswerTests: omnitest(correctExpr='12 - 2')
+  Hint: Essaie  12 - 2 
+
+- Class: text
+  Output: Parfait, tu as compris
+  
+- Class: text
+  Output: Maintenant, nous créons notre premier objet
+
+- Class: cmd_question
+  Output: Créer un objet x qui contient seulement le numéro 28
+  CorrectAnswer: x <- 28
+  AnswerTests: omnitest(correctExpr='x <- 28')
+  Hint: Essaie  x <- 28 
+
+- Class: text
+  Output: Très bien
+
+  
+- Class: cmd_question
+  Output: Créer un objet y qui contient la multiplication compris entre 2 et 3
+  CorrectAnswer: y <- 2 * 3
+  AnswerTests: omnitest(correctExpr='y <- 2 * 3')
+  Hint: Essaie  y <- 2 * 3 
+  
+- Class: cmd_question
+  Output: Nous allons maintenant imprimer notre objet y avec la fonction print()
+  CorrectAnswer: print(y)
+  AnswerTests: omnitest(correctExpr='print(y)')
+  Hint: Essaie  print(y)
+
+
+- Class: text
+  Output: Maintenant, avec la fonction combine, c(), nous créons un objet z qui contient une liste de nombres
+ 
+- Class: cmd_question
+  Output: z doit contenir 5, 9, 12, 23, 45, 67
+  CorrectAnswer: z <- c(5, 9, 12, 23, 45, 67)
+  AnswerTests: omnitest(correctExpr='z <- c(5, 9, 12, 23, 45, 67)')
+  Hint: Essaie  z <- c(5, 9, 12, 23, 45, 67)
+  
+- Class: text
+  Output: Excellent travail!
+
+- Class: text
+  Output: Rendez-vous dans la prochaine leçon!

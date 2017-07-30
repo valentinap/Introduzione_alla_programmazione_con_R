@@ -1,0 +1,51 @@
+- Class: meta
+  Course: Les bases de la programmation en R
+  Lesson: Section 8
+  Author: Valentina Porcu
+  Type: Standard
+  Organization: DataWiring
+  Version: 2.4.3
+
+
+- Class: text_question
+  Output: Appelez la bibliothèque dplyr avec library(dplyr)
+  CorrectAnswer: library(dplyr)
+  AnswerTests: omnitest(correctVal = 'library(dplyr)')
+  Hint: Essaye avec library(dplyr)
+  
+- Class: cmd_question
+  Output: Utilisons l'ensemble de données iris. Sélectionnez les colonnes 1 (Sepal.Length) et 3 (Petal.Length) à l’aide de la fonction dplyr select()
+  CorrectAnswer: select(iris, Sepal.Length, Petal.Length)
+  AnswerTests: omnitest(correctExpr='select(iris, Sepal.Length, Petal.Length)')
+  Hint: Essaye avec select(iris, Sepal.Length, Petal.Length)
+
+- Class: cmd_question
+  Output: Il faut maintenant importer  toutes les variables à l’exception de Species
+  CorrectAnswer: select(iris, -Species)
+  AnswerTests: omnitest(correctExpr='select(iris, -Species)')
+  Hint: Essaye avec select(iris, -Species)
+
+  
+- Class: cmd_question
+  Output: Créer une nouvelle variable septot qui addictionne les colonnes Sepal.Length et Sepal.Width de iris avec la fonction mutate()
+  CorrectAnswer: mutate(iris, septot = Sepal.Length+Sepal.Width)
+  AnswerTests: omnitest(correctExpr='mutate(iris, septot = Sepal.Length+Sepal.Width)')
+  Hint: Essaye avec mutate(iris, septot = Sepal.Length+Sepal.Width)
+
+- Class: cmd_question
+  Output: Sélectionner tous les cas “setosa” à partir de la variable Species avec la fonction filter()
+  CorrectAnswer: filter(iris, Species == "setosa")
+  AnswerTests: omnitest(correctExpr='filter(iris, Species == "setosa")')
+  Hint: Essaye avec filter(iris, Species == "setosa")
+  
+- Class: cmd_question
+  Output: Trier tous les cas, en fonction de la variable Petal.Length avec la fonction arrange()
+  CorrectAnswer: arrange(iris, Petal.Length)
+  AnswerTests: omnitest(correctExpr='arrange(iris, Petal.Length)')
+  Hint: Essaye avec arrange(iris, Petal.Length)
+  
+
+
+
+
+

@@ -1,0 +1,54 @@
+- Class: meta
+  Course: Les bases de la programmation en R
+  Lesson: Section 5
+  Author: Valentina Porcu
+  Type: Standard
+  Organization: DataWiring
+  Version: 2.4.3
+
+- Class: text
+  Output: Dans cette leçon, vous allez créer des fonctions. Une fonction prend ou crée un objet et exécute des opérations sur celui-ci, en nous donnant ensuite un résultat
+  
+- Class: text
+  Output: Etes-vous prêt? Au boulot!
+  
+- Class: cmd_question
+  Output: Nous avons utilisé à plusieurs reprises des fonctions, par exemple pour activer une matrice (t ()), pour créer un objet (c ()), et ainsi de suite. Par exemple, nous pouvons obtenir la date et l’heure d’aujourd'hui en utilisant la fonction Sys.time (). Essayez ci-dessous
+  CorrectAnswer: Sys.time()
+  AnswerTests: omnitest(correctExpr='Sys.time()')
+  Hint: Essaye avec Sys.time()
+  
+- Class: cmd_question
+  Output: Prenons un autre exemple. Utilisez la fonction mean() pour calculer la moyenne des numéros 7, 9, 14, 25. Ne pas oublier la fonction combiner c()
+  CorrectAnswer: mean(c(7, 9, 14, 25))
+  AnswerTests: omnitest(correctExpr='mean(c(7, 9, 14, 25))')
+  Hint: Essaye avec mean(c(7, 9, 14, 25))
+  
+- Class: cmd_question
+  Output: Maintenant, créez un objet x qui contient le numéro 9
+  CorrectAnswer: x <- 9
+  AnswerTests: omnitest(correctExpr='x <- 9')
+  Hint: Essaye avec x <- 9
+  
+- Class: cmd_question
+  Output: Maintenant, créez un objet y qui contient le numéro 15
+  CorrectAnswer: y <- 14
+  AnswerTests: omnitest(correctExpr='y <- 14')
+  Hint: Essaye avec y <- 14
+  
+- Class: script
+  Output: Créer une fonction fun1 qui donne la somme de x et y
+  AnswerTests: fun1()
+  Hint: 
+  Script: customTests.R
+  
+- Class: cmd_question
+  Output: Appliquer la fonction fun1 à deux objets x et y
+  CorrectAnswer: fun1(x, y)
+  AnswerTests: omnitest(correctExpr='fun1(x, y)')
+  Hint: Essaye avec fun1(x, y)
+  
+- Class: text
+  Output: Félicitations ! Vous avez créé votre première fonction!  
+  
+

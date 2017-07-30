@@ -1,0 +1,102 @@
+- Class: meta
+  Course: Les bases de la programmation en R
+  Lesson: Section 6
+  Author: Valentina Porcu
+  Type: Standard
+  Organization: DataWiring
+  Version: 2.4.3
+  
+- Class: text
+  Output: Dans cette leçon, nous allons rencontrer la notion de sub-setting (sous-ensemble), création aléatoire et d'autres notions utiles
+  
+- Class: cmd_question
+  Output: Découvrez votre dossier de travail en utilisant la fonction getwd()
+  CorrectAnswer: getwd()
+  AnswerTests: omnitest(correctExpr='getwd()')
+  Hint: Essaye avec getwd()
+  
+- Class: text
+  Output: Pour définir un dossier de travail, vous pouvez utiliser la fonction setwd() en rajoutant la nouvelle position du dossier
+  
+
+- Class: text
+  Output: Pour installer un package dont nous avons besoin, nous utilisons la fonction install.packages (“nom.package”)
+  
+- Class: text
+  Output: Pour charger un package, nous pouvons utiliser library(package) ou require(package)
+
+- Class: text
+  Output: Dans R il y a beaucoup d'ensembles de données que vous pouvez utiliser pour faire vos test  
+- Class: cmd_question
+  Output: Créer un objet en écrivant iris iris <- iris
+  CorrectAnswer: iris <- iris
+  AnswerTests: omnitest(correctExpr='iris <- iris')
+  Hint: Essaye avec iris <- iris
+  
+- Class: cmd_question
+  Output: Utilisez la fonction dim() sur le dataset iris pour révéler le nombre de cas et des variables
+  CorrectAnswer: dim(iris)
+  AnswerTests: omnitest(correctExpr='dim(iris)')
+  Hint: Essaye avec dim(iris)
+  
+- Class: cmd_question
+  Output: Utilisez la fonction summary() sur le dataset iris pour découvrir d'autres informations sur les données
+  CorrectAnswer: summary(iris)
+  AnswerTests: omnitest(correctExpr='summary(iris)')
+  Hint: Essaye avec summary(iris)
+  
+- Class: cmd_question
+  Output: Imprimez les 8 premiers cas du dataset iris avec la fonction head()
+  CorrectAnswer: head(iris, 8)
+  AnswerTests: omnitest(correctExpr='head(iris, 8)')
+  Hint: Essaye avec head(iris, 8)
+  
+- Class: cmd_question
+  Output: Découvrez les noms de variables en utilisant la fonction names()
+  CorrectAnswer: names(iris)
+  AnswerTests: omnitest(correctExpr='names(iris)')
+  Hint: Essaye avec names(iris)
+  
+- Class: cmd_question
+  Output: Maintenant, nous allons créer une distribution aléatoire sam1 avec la fonction sample(). L'objet doit contenir 50 numéros et il doit être compris entre 1 et 375
+  CorrectAnswer: sam1 <- sample(1:375, 50)
+  AnswerTests: omnitest(correctExpr='sam1 <- sample(1:375, 50)')
+  Hint: Essaye avec sam1 <- sample(1:375, 50)
+  
+- Class: cmd_question
+  Output: La fonction rnorm() peut être utilisé pour créer une distribution normale. La fonction hist() pour créer un histogramme. Utilisez les deux en spécifiant un tirage au sort de 10.000 éléments sur 50 bins. Il n’est pas nécessaire de créer un objet
+  CorrectAnswer: hist(rnorm(10000), breaks = 50)
+  AnswerTests: omnitest(correctExpr='hist(rnorm(10000), breaks = 50)')
+  Hint: Essaye avec hist(rnorm(10000), breaks = 50)
+  
+- Class: cmd_question
+  Output: Avec à la fonction subset(), extrayez de l'ensemble du dataset iris tous les cas de l’ensemble setosa. Enregistrez-les sous les objets setosa
+  CorrectAnswer: setosa <- subset(iris, Species== "setosa")
+  AnswerTests: omnitest(correctExpr='setosa <- subset(iris, Species== "setosa")')
+  Hint: Essaye avec setosa <- subset(iris, Species== "setosa")
+ 
+- Class: cmd_question
+  Output: Depuis l’objet iris, extraire avec which() les cas de la variable Sepal.Lenght supérieures à 4,5
+  CorrectAnswer: iris[which(iris$Sepal.Length > 4.5),]
+  AnswerTests: omnitest(correctExpr='iris[which(iris$Sepal.Length > 4.5),]')
+  Hint: Essaye avec iris[which(iris$Sepal.Length > 4.5),]
+  
+- Class: cmd_question
+  Output: Maintenant utilisez la fonction lapply() pour obtenir sous forme de liste la moyenne des quatre premiers variables de iris 
+  CorrectAnswer: lapply(iris[, 1:4], mean)
+  AnswerTests: omnitest(correctExpr='lapply(iris[, 1:4], mean)')
+  Hint: Essaye avec lapply(iris[, 1:4], mean)
+  
+- Class: cmd_question
+  Output: Utilisons apply() pour obtenir, toujours sur les 4 premières variables de l'iris, la moyenne des lignes
+  CorrectAnswer: apply(iris[, 1:4], 1, mean)
+  AnswerTests: omnitest(correctExpr='apply(iris[, 1:4], 1, mean)')
+  Hint: Essaye avec apply(iris[, 1:4], 1, mean)
+
+- Class: cmd_question
+  Output: Utilisons apply() pour obtenir, toujours sur les 4 premières variables de l'iris, la moyenne des colonnes
+  CorrectAnswer: apply(iris[, 1:4], 2, mean)
+  AnswerTests: omnitest(correctExpr='apply(iris[, 1:4], 2, mean)')
+  Hint: Essaye avec apply(iris[, 1:4], 2, mean)
+  
+
