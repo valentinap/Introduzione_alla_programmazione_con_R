@@ -1,9 +1,9 @@
 - Class: meta
-  Course: R-Lang
+  Course: Introduzione alla programmazione con R
   Lesson: Lezione 9
   Author: Valentina Porcu
   Type: Standard
-  Organization: Codemotion
+  Organization: DataWiring
   Version: 2.4.3
 
 - Class: text
